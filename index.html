@@ -61,7 +61,7 @@
       <section class="hero overlay section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+          <button class="button hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -73,6 +73,39 @@
               <use href="./image/icons.svg#close-modal"></use>
             </svg>
           </button>
+          <form class="modal-form">
+            <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
+
+            <label class="modal-label" for="name"
+              >Имя
+              <input class="modal-input" type="name" name="name" id="name" autofocus />
+            </label>
+            <label class="modal-label" for="tel"
+              >Телефон
+              <input class="modal-input" type="tel" name="tel" id="tel" />
+            </label>
+            <label class="modal-label" for="email"
+              >Почта
+              <input class="modal-input" type="email" name="email" id="email" />
+            </label>
+            <label class="modal-label" for="text"
+              >Комментарий
+              <textarea
+                class="modal-textarea"
+                type="text"
+                name="text"
+                placeholder="Введите текст"
+                id="text"
+              >
+              </textarea>
+            </label>
+            <input type="checkbox" name="consent" id="consent" />
+            <label class="modal-text" for="consent">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="modal-link" href="http://">Условия договора</a>
+            </label>
+            <button class="button modal-submit-btn" ctype="submit">Отправить</button>
+          </form>
         </div>
       </div>
 
@@ -465,6 +498,20 @@
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="div-subscribe">
+            <h2 class="footer-title">Подпишитесь на рассылку</h2>
+            <form class="subscribe-form">
+              <input class="subscribe-input" type="email" name="email" placeholder="E-mail" />
+              <button class="button subscribe-button" type="submit">
+                Подписаться
+                <span class="wrapper-icon">
+                  <svg class="subscribe-icon" width="24" height="24">
+                    <use href="./image/icons.svg#icon-send"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
