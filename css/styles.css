@@ -14,6 +14,7 @@
   --title-text-color: #ffffff;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --btn-hover-focus: #188ce8;
   --hero-footer-bg-color: #2f303a;
   --bgc-secondary: #f5f4fa;
   --clients-logo-color: #afb1b8;
@@ -315,6 +316,10 @@ a {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  width: 30px;
+  height: 30px;
+
   border: 0;
   padding: 0;
 
@@ -325,6 +330,11 @@ a {
   cursor: pointer;
 }
 .backdrop-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,7 +369,8 @@ a {
   color: var(--secondary-text-color);
 }
 
-.modal-input {
+.modal-input,
+.modal-textarea {
   width: 448px;
   height: 40px;
   margin-bottom: 10px;
@@ -369,20 +380,24 @@ a {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
 }
 .modal-textarea {
-  position: relative;
-  margin-bottom: 0px;
+  resize: none;
 
-  height: 120px;
+  margin-bottom: 0px;
   padding: 12px 16px;
 }
 .modal-textarea::placeholder {
-  position: absolute;
   top: 12px;
   left: 16px;
   color: rgba(117, 117, 117, 0.5);
 }
+.modal-input:hover,
+.modal-textarea:hover {
+  border-color: var(--accent-color);
+}
+
 .modal-text {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -401,8 +416,15 @@ a {
 }
 
 .modal-submit-btn {
+  display: block;
   margin: auto;
   padding: 10px 0px;
+
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: var(--btn-hover-focus);
 }
 /* Benefits */
 .benefits-list {
@@ -585,12 +607,12 @@ a {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #188ce8;
+  background-color: var(--btn-hover-focus);
 }
 
 .hero-button {
@@ -601,7 +623,7 @@ a {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .button-primary,
 .button-secondary {
